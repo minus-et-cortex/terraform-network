@@ -67,3 +67,7 @@ resource "aws_route_table_association" "minus-et-cortex-public-route-table-assoc
   subnet_id      = "${aws_subnet.minus-et-cortex-public-subnet.id}"
   route_table_id = "${aws_route_table.minus-et-cortex-public-route-table.id}"
 }
+
+output "aws-vpc-id" {
+  value = "${aws_vpc.minus-et-cortex-vpc.id}"
+}
